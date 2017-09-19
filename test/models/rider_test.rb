@@ -5,8 +5,8 @@ class RiderTest < ActiveSupport::TestCase
   def test_that_riders_swing
     # Use your knowledge of factories to make the test pass!
     # this time use create( ... ) instead of build
-    aegon = Rider.create(name:"Aegon", sword:"Blackfyre", email:"aegon@email")
-    daenerys = Rider.create(name:"Daenerys", sword:"Lightbringer", email:"daenerys@email")
+    aegon = create(:rider, name:"Aegon", sword:"Blackfyre")
+    daenerys = create(:rider, name:"Daenerys", sword:"Lightbringer")
 
     # can't change the assert_ statements!
     skip unless aegon && daenerys
